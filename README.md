@@ -1,7 +1,12 @@
-# Repaso CRUD
+# Express generator
 
-Aplicación base | Ejercicio de repaso CRUD populado
+Boilerplate for a basic ExpressJS backend
 
-## Endpoints & iterations
+## Install
 
-Encuentra la tabla de endpoints y las iteraciones del ejercicio [en este enlace](https://docs.google.com/document/d/1xvGjBBJgs6ha5jSFdYNiKKwh7699G5oTihMwd3AVpWE/edit?usp=sharing).
+- Run `npm i` on the root directory
+
+## Run
+
+- Create a `.env` file on the root directory to populate the database (`DB`) and port (`PORT`)
+- Run `npm run dev` command on the root directory

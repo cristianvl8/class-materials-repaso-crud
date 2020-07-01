@@ -1,1 +1,3 @@
-module.exports = app => app.locals.title = 'Roller CRUD! Rutas, vistas y mucha diversión';
+module.exports = app => {
+    app.locals.title = 'Express generator'
+}

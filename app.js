@@ -1,16 +1,22 @@
 require('dotenv').config()
 
+// Database
+require('./configs/mongoose.config')
+
+// Debugger
+require('./configs/debugger.config')
+
+// App
 const express = require('express')
 const app = express()
 
-// DB, middlewares, locals & debug
-require('./configs/mongoose.config')
-require('./configs/middlewares.config')(app)
-require('./configs/preprocessor.config')(app)
+// Configs
+require('./configs/preformatter.config')(app)
+require('./configs/middleware.config')(app)
+require('./configs/views.configs')(app)
 require('./configs/locals.config')(app)
-require('./configs/debug.config')
 
-// Base URL's
+// Base URLS
 app.use('/', require('./routes/index.routes'))
 app.use('/coasters', require('./routes/coaster.routes'))
 app.use('/parks', require('./routes/park.routes'))
